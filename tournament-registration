@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string> 
+using namespace std;
+
+int main() {
+    string name;
+    string choice = "y"; 
+    int rating;
+    int age;
+
+    while (choice == "y") {
+
+
+
+
+    cout << "Enter Your First Name";
+    cin >> name;
+    cout << "Enter Your Rating";
+    cin >> rating;
+    cout << "Enter Your Age";
+    cin >> age;
+
+    if (rating > 2000) {
+        cout << "Welcome " << name << ", To the All India Masters Tournament.Your rating is " << rating << " and you are " << age << " years old." << endl;
+    } 
+    else if (rating > 1600) {
+        cout << "Welcome " << name << ", To the All India Intermediate Tournament.Your rating is " << rating << " and you are " << age << " years old." << endl;
+    }
+    else {
+        cout << "Sorry " << name << ", You are not eligible for any tournament.Your rating is " << rating << " and you are " << age << " years old." << endl;
+    }
+
+    cout << "Do you want to register another player? (y/n)";
+    cin >> choice;
+
+ }
+
+    cout << "Registration Accepted." << endl;
+    return 0;
+
+   
+}
