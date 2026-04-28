@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string> 
+using namespace std;
+
+void processPlayer() {
+    string name;
+    int rating, age;
+
+    cout << "Enter Your First Name: ";
+    cin >> name;
+    cout << "Enter Your Rating: ";
+    cin >> rating;
+    cout << "Enter Your Age: ";
+    cin >> age;
+
+    if (rating > 2000) {
+        cout << "Welcome " << name << ", To the All India Masters Tournament." << endl;
+    } 
+    else if (rating > 1600) {
+        cout << "Welcome " << name << ", To the All India Intermediate Tournament." << endl;
+    }
+    else {
+        cout << "Sorry " << name << ", You are not eligible for any tournament." << endl;
+    }
+}
+
+int main() {
+    string choice = "y"; 
+
+    while (choice == "y") {
+        processPlayer(); 
+
+        cout << "Do you want to register another player? (y/n): ";
+        cin >> choice;
+    }
+
+    cout << "Registration Closed." << endl;
+    return 0;
+  
+}
