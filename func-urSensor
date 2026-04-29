@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+ class UltrasonicSensor {
+  public: 
+    string modelName;
+    int pin;
+
+    void measure() {
+        cout << modelName << " is measuring distance on pin " << pin << "..." << endl;
+    }
+}; 
+
+int main() {
+    
+    UltrasonicSensor mySensor; 
+
+    
+    mySensor.modelName = "HC-SR04";
+    mySensor.pin = 9;
+
+    
+    mySensor.measure(); 
+
+    return 0;
+}
