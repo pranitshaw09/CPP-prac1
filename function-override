@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class mySensor {
+public: 
+    string modelName = "Generic Component";
+
+    
+    void working() {
+        cout << modelName << " is checking pulses..." << endl;
+    }
+}; 
+
+class LEDlight : public mySensor {
+public:
+    string colorValue; 
+
+    void working() {
+        cout << modelName << " is glowing " << colorValue << "!" << endl;
+    }
+
+    void showColor() { 
+        cout << "The LED light colour is: " << colorValue << endl;
+    }
+};
+
+int main() {
+    mySensor generic;
+    generic.working(); 
+
+    LEDlight myLed;
+    myLed.modelName = "Internal LED";
+    myLed.colorValue = "Red";
+    
+    myLed.working(); 
+
+    return 0;
+}
